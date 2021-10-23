@@ -16,8 +16,8 @@ const Message = ({ message }) => {
         )}
       </div>
       <div>
-        <p className='text-blue-700 font-bold'>{message.author.username}</p>
-        <p className='text-white'>{message.message}</p>
+        <p className='text-indigo-700 font-bold'>{message.author.username}</p>
+        <p className='text-black'>{message.message}</p>
       </div>
     </div>
   )
