@@ -36,7 +36,7 @@ export default function SupabaseSlackClone({ Component, pageProps }) {
     }
   }, [user])
 
-  const signIn = async () => {
+  const signIn: any = async () => {
     await fetchUserRoles(userRoles => setUserRoles(userRoles.map(userRole => userRole.role)))
   }
 
