@@ -1,4 +1,4 @@
-import '~/styles/style.scss'
+import '@/styles/style.scss'
 import React, { useState, useEffect } from 'react'
 import Router from 'next/router'
 import UserContext from 'lib/UserContext'
@@ -37,7 +37,7 @@ export default function SupabaseSlackClone({ Component, pageProps }) {
   }, [user])
 
   const signIn = async () => {
-    await fetchUserRoles((userRoles) => setUserRoles(userRoles.map((userRole) => userRole.role)))
+    await fetchUserRoles(userRoles => setUserRoles(userRoles.map(userRole => userRole.role)))
   }
 
   const signOut = async () => {
@@ -52,9 +52,8 @@ export default function SupabaseSlackClone({ Component, pageProps }) {
         user,
         userRoles,
         signIn,
-        signOut,
-      }}
-    >
+        signOut
+      }}>
       <Component {...pageProps} />
     </UserContext.Provider>
   )
