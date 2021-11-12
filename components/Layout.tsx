@@ -61,6 +61,10 @@ export default function Layout(props) {
               />
             ))}
           </ul>
+          <h4 className='font-bold text-indigo-800 mt-4'>Notes</h4>
+          <ul className='channel-list'>
+            <NoteSidebarItem />
+          </ul>
         </div>
       </nav>
 
@@ -84,3 +88,15 @@ const SidebarItem = ({ channel, isActiveChannel, user, userRoles }) => (
     </li>
   </>
 )
+
+const NoteSidebarItem = () => {
+  return (
+    <>
+      <li className='flex items-center justify-between'>
+        <Link href='/notes' as={'/notes'}>
+          <a className={'font-medium text-indigo-800'}>General</a>
+        </Link>
+      </li>
+    </>
+  )
+}
